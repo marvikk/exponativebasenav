@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import * as React from 'react';
 
 import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
+import TaskListScreen from '../screens/TaskListScreen';
 import LinksScreen from '../screens/LinksScreen';
 import Main from '../screens/Main';
 import { NavigationContainer } from '@react-navigation/native';
@@ -33,6 +33,13 @@ export default function BottomTabNavigator({ navigation, route }) {
           header: null,
           title: 'Resources',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="TaskListScreen"
+        component={TaskListScreen}
+        options={{
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
         }}
       />
     </BottomTab.Navigator>
