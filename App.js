@@ -3,8 +3,7 @@ import { SplashScreen } from 'expo';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 
-import BottomTabNavigator from './navigation/BottomTabNavigator';
- import Store from './store/Store';
+import BottomTabNavigator from './navigation';
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = React.useState(false);

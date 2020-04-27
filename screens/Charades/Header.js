@@ -9,14 +9,14 @@ import {
   Right
  } from 'native-base';
 
-export default () => {
+export default (props) => {
     return (
         <Header>
           <Left>
             <Button
               transparent
             >
-              <Icon name="ios-menu" />
+              <Icon name="ios-menu" onPress={() => props.navigation.openDrawer()}/>
             </Button>
           </Left>
           <Body>

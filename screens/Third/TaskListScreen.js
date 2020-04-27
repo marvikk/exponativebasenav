@@ -7,7 +7,7 @@ import {
   View
 } from 'react-native'
 
-import taskListStore from '../store/Store'
+import taskListStore from '../../store/Store'
 import { observer } from 'mobx-react'
 
 @observer

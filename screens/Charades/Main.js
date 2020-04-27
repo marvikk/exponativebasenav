@@ -8,10 +8,10 @@ import {
 
 import { Col, Grid, Row } from 'react-native-easy-grid';
 
-import styles from './styles'
+import styles from '../styles'
 
-import getTheme from '../native-base-theme/components';
-import material from '../native-base-theme/variables/material';
+import getTheme from '../../native-base-theme/components';
+import material from '../../native-base-theme/variables/material';
 
 // import ButtonLayout from './ButtonLayout';
 import HeaderComponent from './Header';
@@ -20,12 +20,12 @@ import Riddle from './Riddle';
 import Controls from './Controls';
 
 
-export default function Main() {
+export default function Main(props) {
     
         return (
             <StyleProvider style={getTheme(material)}>
                 <Container style={styles.container}>
-                    <HeaderComponent />
+                    <HeaderComponent {...props}/>
     
                     <Grid>
                     <Row  size={1} style={{ backgroundColor: "#fff"}}>

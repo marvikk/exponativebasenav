@@ -6,7 +6,7 @@ import {
   Text
  } from 'native-base';
 
-import styles from './styles'
+import styles from '../styles'
 
 
 export default () => {
