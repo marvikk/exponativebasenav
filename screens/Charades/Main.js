@@ -1,17 +1,11 @@
 import React from 'react';
 import { 
-    Container,
-    StyleProvider,
-    Button,
-    Title
+    Container
    } from 'native-base';
 
 import { Col, Grid, Row } from 'react-native-easy-grid';
 
 import styles from '../styles'
-
-import getTheme from '../../native-base-theme/components';
-import material from '../../native-base-theme/variables/material';
 
 // import ButtonLayout from './ButtonLayout';
 import HeaderComponent from './Header';
@@ -23,7 +17,6 @@ import Controls from './Controls';
 export default function Main(props) {
     
         return (
-            <StyleProvider style={getTheme(material)}>
                 <Container style={styles.container}>
                     <HeaderComponent {...props}/>
     
@@ -49,8 +42,6 @@ export default function Main(props) {
                     </Grid>
     
                 </Container>
-                
-            </StyleProvider>
-        );
+                        );
     
 }

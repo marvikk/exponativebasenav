@@ -4,7 +4,8 @@ import {
   Text,
   TouchableOpacity,
   FlatList,
-  View
+  View,
+  Button
 } from 'react-native'
 
 import taskListStore from '../../store/Store'
@@ -37,6 +38,7 @@ export default class TaskListScreen extends Component {
     const list = taskListStore.list.slice() // don't forget copy the list from store
 
     return (
+      <View>
       <FlatList
         style={styles.container}
         data={list}
@@ -44,6 +46,10 @@ export default class TaskListScreen extends Component {
         keyExtractor={(item, index) => `${index}`}
         renderItem={this.renderItem}
       />
+      <Button title='chicken' onPress={()=>{
+        taskListStore.searchForUser()
+      }}>Chicken</Button>
+    </View>
     )
   }
 }

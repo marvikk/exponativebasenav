@@ -7,6 +7,7 @@ import LinksScreen from '../screens/Second/LinksScreen';
 import Main from '../screens/Charades/Main';
 import HomeScreen from '../screens/Fourth/HomeScreen';
 import { NavigationContainer } from '@react-navigation/native';
+import SideBar from '../screens/Charades/Sidebar'
 
 import {
   createDrawerNavigator,
@@ -21,8 +22,7 @@ const Drawer = createDrawerNavigator();
 
 function DrawerNav() {
   return (
-    // <Drawer.Navigator drawerContent={props => <CustomDrawerContent {...props} />}>
-      <Drawer.Navigator>
+    <Drawer.Navigator drawerContent={props => <SideBar {...props} />}>
       <Drawer.Screen name="Main" component={Main} />
     </Drawer.Navigator>
   );
@@ -72,13 +72,13 @@ export default function BottomTabNavigator({ navigation, route }) {
   );
 }
 
-function getHeaderTitle(route) {
-  const routeName = route.state?.routes[route.state.index]?.name ?? INITIAL_ROUTE_NAME;
+// function getHeaderTitle(route) {
+//   const routeName = route.state?.routes[route.state.index]?.name ?? INITIAL_ROUTE_NAME;
 
-  switch (routeName) {
-    case 'Home':
-      return 'How to get started';
-    case 'Links':
-      return 'Links to learn more';
-  }
-}
+//   switch (routeName) {
+//     case 'Home':
+//       return 'How to get started';
+//     case 'Links':
+//       return 'Links to learn more';
+//   }
+// }

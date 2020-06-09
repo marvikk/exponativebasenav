@@ -17,7 +17,7 @@ export default () => {
                 <Button success rounded style={styles.padded}>
                 <Text>Start</Text>
                 </Button>
-                <Button success rounded style={styles.padded}>
+                <Button pink success rounded style={styles.padded}>
                 <Text>Stop</Text>
                 </Button>
             </Body>

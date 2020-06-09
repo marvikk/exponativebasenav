@@ -1,6 +1,7 @@
 import * as WebBrowser from 'expo-web-browser';
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Platform, StyleSheet, TouchableOpacity, View } from 'react-native';
+import { Text } from 'native-base';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import { MonoText } from '../../components/StyledText';
@@ -23,7 +24,7 @@ export default function HomeScreen() {
         <View style={styles.getStartedContainer}>
           <DevelopmentModeNotice />
 
-          <Text style={styles.getStartedText}>Open up the code for this screen:</Text>
+          <Text>Open up the code for this screen:</Text>
 
           <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
             <MonoText>screens/HomeScreen.js</MonoText>

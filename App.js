@@ -3,7 +3,9 @@ import { SplashScreen } from 'expo';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 
-import BottomTabNavigator from './navigation';
+import MainComponent from './navigation';
+import { StyleProviderThemed } from './StyleProviderThemed'
+
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = React.useState(false);
@@ -34,7 +36,10 @@ export default function App(props) {
     return null;
   } else {
     return (
-          <BottomTabNavigator />
+      <StyleProviderThemed>
+          <MainComponent />
+      </StyleProviderThemed>
+
     );
   }
 }
